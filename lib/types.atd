@@ -1,0 +1,65 @@
+type artist = {
+  href: string;
+  id: string;
+  name: string;
+  uri: string;
+}
+
+type artist_search = {
+  href: string;
+  items: artist list;
+  limit: int;
+  offset: int;
+  total: int;
+}
+
+type artist_search_wrapper = {
+  artists: artist_search;
+}
+
+type album = {
+  album_type: string;
+  available_markets: string list;
+  href: string;
+  id: string;
+  name: string;
+  uri: string;
+}
+
+type album_search = {
+  href: string;
+  items: album list;
+  limit: int;
+  offset: int;
+  total: int;
+}
+
+type album_search_wrapper = {
+  albums: album_search;
+}
+
+type track = {
+  artists: artist list;
+  available_markets: string list;
+  disc_number: int;
+  duration_ms: int;
+  explicit: bool;
+  href: string;
+  id: string;
+  name: string;
+  preview_url: string;
+  track_number: int;
+  uri: string;
+}
+
+type track_search = {
+  href: string;
+  items: track list;
+  limit: int;
+  offset: int;
+  total: int;
+}
+
+type track_search_wrapper = {
+  tracks: track_search;
+}

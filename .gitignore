@@ -1,0 +1,9 @@
+lib/types_j.ml*
+lib/types_t.ml*
+*.swp
+
+_build
+setup.data
+setup.log
+
+test_main.byte

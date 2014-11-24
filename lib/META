@@ -1,0 +1,12 @@
+# OASIS_START
+# DO NOT EDIT (digest: 59e3a34316eb2d6499b5cb9847cf13ee)
+version = "0.1.0"
+description = "OCaml bindings to the Spotify web API"
+requires = "atdgen biniou yojson uri cohttp.lwt"
+archive(byte) = "spotify_web_api.cma"
+archive(byte, plugin) = "spotify_web_api.cma"
+archive(native) = "spotify_web_api.cmxa"
+archive(native, plugin) = "spotify_web_api.cmxs"
+exists_if = "spotify_web_api.cma"
+# OASIS_STOP
+

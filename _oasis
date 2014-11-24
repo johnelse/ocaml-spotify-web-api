@@ -1,0 +1,30 @@
+OASISFormat: 0.4
+Name:        spotify-web-api
+Version:     0.1.0
+Synopsis:    OCaml bindings to the Spotify web API
+License:     MIT
+Authors:     John Else
+Copyrights:  (C) 2014 John Else
+BuildTools:  ocamlbuild
+Plugins:     META (0.4)
+
+Library spotify_web_api
+  CompiledObject:        best
+  Path:                  lib
+  Findlibname:           spotify-web-api
+  Modules:               Types_t, Types_j, Common, Search
+  ByteOpt:               -bin-annot
+  NativeOpt:             -bin-annot
+  BuildDepends:          atdgen, biniou, yojson, uri, cohttp.lwt
+
+Executable test_main
+  Build$:                flag(tests)
+  Path:                  test
+  MainIs:                test_main.ml
+  Install:               false
+  BuildDepends:          oUnit, spotify-web-api
+
+Test test_main
+  Command:               $test_main
+  Run$:                  flag(tests)
+  WorkingDirectory:      test
