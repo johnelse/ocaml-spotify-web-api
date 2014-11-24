@@ -15,10 +15,7 @@ lib/%_j.ml: lib/%.atd
 lib/%_t.ml: lib/%.atd
 	atdgen -t $<
 
-setup.ml: _oasis $(ATDGEN_J_FILES) $(ATDGEN_T_FILES)
-	oasis setup
-
-setup.data: setup.ml
+setup.data: $(ATDGEN_J_FILES) $(ATDGEN_T_FILES)
 	ocaml setup.ml -configure $(TESTS_FLAG)
 
 build: setup.data
