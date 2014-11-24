@@ -1,5 +1,4 @@
 open Lwt
-module C = Cohttp_lwt_unix
 
 let search mode query parse_fn =
   let open Cohttp_lwt_unix_io in
