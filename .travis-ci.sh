@@ -1,5 +1,5 @@
 # OPAM packages needed to build tests.
-OPAM_PACKAGES="lwt atdgen biniou yojson uri"
+OPAM_PACKAGES="ounit lwt atdgen biniou yojson uri"
 
 
 case "$OCAML_VERSION,$OPAM_VERSION" in
