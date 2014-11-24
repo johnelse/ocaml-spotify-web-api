@@ -32,6 +32,6 @@ opam init
 opam install ${OPAM_PACKAGES}
 opam install cohttp
 
-eval `opam config -env`
+eval `opam config env`
 make
 make test
