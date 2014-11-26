@@ -26,7 +26,12 @@ opam --git-version
 
 opam init
 eval `opam config env`
+
+git clone git://github.com/johnelse/opam-installext /tmp/opam-installext
+opam pin add opam-installext /tmp/opam-installext
+
 opam pin add spotify-web-api $PWD -n
+opam installext spotify-web-api
 opam install spotify-web-api --deps-only
 
 eval `opam config env`
