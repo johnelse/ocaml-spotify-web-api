@@ -1,7 +1,3 @@
-# OPAM packages needed to build tests.
-OPAM_PACKAGES="ounit lwt atdgen biniou yojson uri"
-
-
 case "$OCAML_VERSION,$OPAM_VERSION" in
 3.12.1,1.0.0) ppa=avsm/ocaml312+opam10 ;;
 3.12.1,1.1.0) ppa=avsm/ocaml312+opam11 ;;
@@ -29,8 +25,9 @@ opam --version
 opam --git-version
 
 opam init
-opam install ${OPAM_PACKAGES}
-opam install cohttp
+eval `opam config env`
+opam pin add spotify-web-api $PWD -n
+opam install spotify-web-api --deps-only
 
 eval `opam config env`
 make
