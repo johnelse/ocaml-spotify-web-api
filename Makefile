@@ -37,6 +37,4 @@ reinstall: setup.data
 clean:
 	ocamlbuild -clean
 	$(foreach FILE, $(ATDGEN_FILES), rm -f `atdgen -list $(FILE)`)
-#	$(foreach FILE, $(ATDGEN_J_FILES), rm -f $(FILE)*)
-#	$(foreach FILE, $(ATDGEN_T_FILES), rm -f $(FILE)*)
 	rm -f setup.data setup.log
