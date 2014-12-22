@@ -34,6 +34,5 @@ opam pin add spotify-web-api $PWD -n
 opam installext spotify-web-api
 opam install spotify-web-api --deps-only
 
-eval `opam config env`
 make
 make test
