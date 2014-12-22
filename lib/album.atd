@@ -1,4 +1,4 @@
-type album = {
+type album_simplified = {
   album_type: string;
   available_markets: string list;
   href: string;
@@ -9,7 +9,7 @@ type album = {
 
 type search = {
   href: string;
-  items: album list;
+  items: album_simplified list;
   limit: int;
   offset: int;
   total: int;
