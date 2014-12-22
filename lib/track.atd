@@ -1,0 +1,27 @@
+type artist <ocaml from="Artist"> = abstract
+
+type track = {
+  artists: artist list;
+  available_markets: string list;
+  disc_number: int;
+  duration_ms: int;
+  explicit: bool;
+  href: string;
+  id: string;
+  name: string;
+  preview_url: string;
+  track_number: int;
+  uri: string;
+}
+
+type search = {
+  href: string;
+  items: track list;
+  limit: int;
+  offset: int;
+  total: int;
+}
+
+type search_wrapper = {
+  tracks: search;
+}

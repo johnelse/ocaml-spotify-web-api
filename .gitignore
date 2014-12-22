@@ -1,5 +1,9 @@
-lib/types_j.ml*
-lib/types_t.ml*
+lib/album_j.ml*
+lib/album_t.ml*
+lib/artist_j.ml*
+lib/artist_t.ml*
+lib/track_j.ml*
+lib/track_t.ml*
 *.swp
 
 _build

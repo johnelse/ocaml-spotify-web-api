@@ -1,0 +1,20 @@
+type album = {
+  album_type: string;
+  available_markets: string list;
+  href: string;
+  id: string;
+  name: string;
+  uri: string;
+}
+
+type search = {
+  href: string;
+  items: album list;
+  limit: int;
+  offset: int;
+  total: int;
+}
+
+type search_wrapper = {
+  albums: search;
+}

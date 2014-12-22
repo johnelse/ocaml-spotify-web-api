@@ -1,7 +1,11 @@
 # OASIS_START
-# DO NOT EDIT (digest: ebe9bc6351cb287201a5ad872e0d0c9f)
-Types_t
-Types_j
+# DO NOT EDIT (digest: 90efb405122d237f80a2e9d6dc8dc11a)
+Album_t
+Album_j
+Artist_t
+Artist_j
+Track_t
+Track_j
 Common
 Search
 # OASIS_STOP
