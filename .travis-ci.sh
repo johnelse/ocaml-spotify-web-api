@@ -13,6 +13,7 @@ case "$OCAML_VERSION,$OPAM_VERSION" in
 *) echo Unknown $OCAML_VERSION,$OPAM_VERSION; exit 1 ;;
 esac
 
+# install opam
 echo "yes" | sudo add-apt-repository ppa:$ppa
 sudo apt-get update -qq
 sudo apt-get install -qq ocaml ocaml-native-compilers camlp4-extra opam
@@ -24,15 +25,19 @@ echo OPAM versions
 opam --version
 opam --git-version
 
+# setup opam
 opam init
 eval `opam config env`
 
+# install opam-installext
 git clone git://github.com/johnelse/opam-installext /tmp/opam-installext
 opam pin add opam-installext /tmp/opam-installext
 
+# install deps
 opam pin add spotify-web-api $PWD -n
 opam installext spotify-web-api
 opam install spotify-web-api --deps-only
 
+# test the library itself
 make
 make test
