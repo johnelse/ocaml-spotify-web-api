@@ -4,6 +4,9 @@ build: [
   [make]
   [make "PREFIX=%{prefix}%" "install"]
 ]
+build-test: [
+  [make "test"]
+]
 remove: [
   [make "PREFIX=%{prefix}%" "uninstall"]
 ]
