@@ -12,7 +12,10 @@ Library spotify_web_api
   CompiledObject:        best
   Path:                  lib
   Findlibname:           spotify-web-api
-  Modules:               Album_t, Album_j, Artist_t, Artist_j, Track_t, Track_j, Common, Search
+  Modules:               Album_t, Album_j,
+                         Artist_t, Artist_j,
+                         Track_t, Track_j,
+                         Common, Search
   ByteOpt:               -bin-annot
   NativeOpt:             -bin-annot
   BuildDepends:          atdgen, biniou, yojson, uri, cohttp.lwt
