@@ -2,10 +2,12 @@ opam-version: "1"
 maintainer: "john.else@gmail.com"
 build: [
   [make]
-  [make "PREFIX=%{prefix}%" "install"]
 ]
 build-test: [
   [make "test"]
+]
+install: [
+  [make "PREFIX=%{prefix}%" "install"]
 ]
 remove: [
   [make "PREFIX=%{prefix}%" "uninstall"]
