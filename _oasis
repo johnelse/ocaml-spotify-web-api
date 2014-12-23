@@ -14,6 +14,7 @@ Library spotify_web_api
   Findlibname:           spotify-web-api
   Modules:               Album_t, Album_j,
                          Artist_t, Artist_j,
+                         Image_t, Image_j,
                          Track_t, Track_j,
                          Common, Search
   ByteOpt:               -bin-annot

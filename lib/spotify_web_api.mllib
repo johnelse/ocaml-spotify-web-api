@@ -1,9 +1,11 @@
 # OASIS_START
-# DO NOT EDIT (digest: 90efb405122d237f80a2e9d6dc8dc11a)
+# DO NOT EDIT (digest: 6f05f44b723142ca133a541e9fe0ff0a)
 Album_t
 Album_j
 Artist_t
 Artist_j
+Image_t
+Image_j
 Track_t
 Track_j
 Common
