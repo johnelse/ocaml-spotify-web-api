@@ -1,7 +1,7 @@
-type artist <ocaml from="Artist"> = abstract
+type artist_simplified <ocaml from="Artist"> = abstract
 
 type track = {
-  artists: artist list;
+  artists: artist_simplified list;
   available_markets: string list;
   disc_number: int;
   duration_ms: int;
