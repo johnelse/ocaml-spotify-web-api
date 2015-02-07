@@ -1,11 +1,13 @@
 # OASIS_START
-# DO NOT EDIT (digest: 9378901d4ba612d83238e10508105fdd)
+# DO NOT EDIT (digest: 7adc0a5e603407b4ab9a4bf28273ae13)
 Album_t
 Album_j
 Artist_t
 Artist_j
 External_urls_t
 External_urls_j
+Followers_t
+Followers_j
 Image_t
 Image_j
 Track_t
