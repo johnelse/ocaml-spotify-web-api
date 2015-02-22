@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: dcaa6a2eaea8b3646d7cf984deb2f572)
+# DO NOT EDIT (digest: c045abeca46b731917c5c2c219a9564e)
 Album_t
 Album_j
 Artist_t
@@ -14,6 +14,5 @@ Image_t
 Image_j
 Track_t
 Track_j
-Common
-Search
+Spotify_web_api
 # OASIS_STOP

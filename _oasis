@@ -19,7 +19,7 @@ Library spotify_web_api
                          Followers_t, Followers_j,
                          Image_t, Image_j,
                          Track_t, Track_j,
-                         Common, Search
+                         Spotify_web_api
   ByteOpt:               -bin-annot
   NativeOpt:             -bin-annot
   BuildDepends:          atdgen, biniou, yojson, uri, cohttp.lwt

@@ -1,4 +1,5 @@
 open OUnit
+open Spotify_web_api
 
 type check_href_output =
   | Exception of exn
