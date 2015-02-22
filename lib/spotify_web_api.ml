@@ -12,8 +12,6 @@ module Common = struct
 
   exception Invalid_href
 
-  module C = Cohttp_lwt_unix
-
   let check_href mode href =
     try
       Scanf.sscanf href "spotify:%s@:%s"
@@ -24,6 +22,10 @@ module Common = struct
           then raise Invalid_href)
     with Scanf.Scan_failure _ ->
       raise Invalid_href
+end
+
+module Remote = struct
+  module C = Cohttp_lwt_unix
 
   let read_uri uri parse_fn =
     let open Cohttp_lwt_unix_io in
@@ -41,7 +43,7 @@ module Search = struct
       (Printf.sprintf "%s/search?type=%s&q=%s"
         Common.base_uri (Common.string_of_mode mode) query)
     in
-    Common.read_uri uri parse_fn
+    Remote.read_uri uri parse_fn
 
   let search_albums query =
     search `album query Album_j.search_wrapper_of_string

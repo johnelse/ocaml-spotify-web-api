@@ -8,8 +8,6 @@ module Common : sig
   val string_of_mode : mode -> string
 
   val check_href : mode -> string -> unit
-
-  val read_uri : Uri.t -> (string -> 'a) -> 'a Lwt.t
 end
 
 module Search : sig
