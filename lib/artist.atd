@@ -1,6 +1,7 @@
 type external_urls <ocaml from="External_urls"> = abstract
 type followers <ocaml from="Followers"> = abstract
 type image <ocaml from="Image"> = abstract
+type 'a paging <ocaml from="Paging"> = abstract
 
 type artist = {
   external_urls: external_urls;
@@ -22,14 +23,6 @@ type artist_simplified = {
   uri: string;
 }
 
-type search = {
-  href: string;
-  items: artist list;
-  limit: int;
-  offset: int;
-  total: int;
-}
-
 type search_wrapper = {
-  artists: search;
+  artists: artist paging;
 }

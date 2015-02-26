@@ -18,6 +18,7 @@ Library spotify_web_api
                          External_urls_t, External_urls_j,
                          Followers_t, Followers_j,
                          Image_t, Image_j,
+                         Paging_t, Paging_j,
                          Track_t, Track_j,
                          Spotify_web_api
   ByteOpt:               -bin-annot

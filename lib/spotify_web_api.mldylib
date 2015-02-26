@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: c045abeca46b731917c5c2c219a9564e)
+# DO NOT EDIT (digest: 85e4b540660fc767943feab79545e9ad)
 Album_t
 Album_j
 Artist_t
@@ -12,6 +12,8 @@ Followers_t
 Followers_j
 Image_t
 Image_j
+Paging_t
+Paging_j
 Track_t
 Track_j
 Spotify_web_api

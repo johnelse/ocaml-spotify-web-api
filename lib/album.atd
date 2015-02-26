@@ -1,3 +1,5 @@
+type 'a paging <ocaml from="Paging"> = abstract
+
 type album_simplified = {
   album_type: string;
   available_markets: string list;
@@ -7,14 +9,6 @@ type album_simplified = {
   uri: string;
 }
 
-type search = {
-  href: string;
-  items: album_simplified list;
-  limit: int;
-  offset: int;
-  total: int;
-}
-
 type search_wrapper = {
-  albums: search;
+  albums: album_simplified paging;
 }

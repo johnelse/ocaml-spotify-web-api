@@ -2,6 +2,7 @@ type album_simplified <ocaml from="Album"> = abstract
 type artist_simplified <ocaml from="Artist"> = abstract
 type external_ids <ocaml from="External_ids"> = abstract
 type external_urls <ocaml from="External_urls"> = abstract
+type 'a paging <ocaml from="Paging"> = abstract
 
 type track = {
   album: album_simplified;
@@ -35,14 +36,6 @@ type track_simplified = {
   uri: string;
 }
 
-type search = {
-  href: string;
-  items: track list;
-  limit: int;
-  offset: int;
-  total: int;
-}
-
 type search_wrapper = {
-  tracks: search;
+  tracks: track paging;
 }
