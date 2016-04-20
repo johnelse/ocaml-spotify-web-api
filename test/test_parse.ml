@@ -15,6 +15,52 @@ let string_of_file filename =
     close_in chan;
     raise e
 
+let test_parse_album_search () =
+  let results =
+    string_of_file "album_search.json"
+    |> Album_j.search_wrapper_of_string
+  in
+  assert_equal
+    results
+    Album_j.({
+      albums = Paging_j.({
+        href = "https://api.spotify.com/v1/search?query=cavalcade+of+dadaist&offset=0&limit=20&type=album";
+        items = [
+          {
+            album_type = "album";
+            available_markets = ["AR"; "BO"; "BR"; "CA"; "CL"; "CO"; "CR"; "DO"; "EC"; "GT"; "HN"; "MX"; "NI"; "PA"; "PE"; "PY"; "SV"; "US"; "UY"];
+            external_urls = [
+              "spotify", "https://open.spotify.com/album/5v4vDmq8pNO3TbegZmK5bL";
+            ];
+            href = "https://api.spotify.com/v1/albums/5v4vDmq8pNO3TbegZmK5bL";
+            id = "5v4vDmq8pNO3TbegZmK5bL";
+            images = Image_j.([
+              {
+                height = 640;
+                url = "https://i.scdn.co/image/d2c396974cd76ab68e95deb6c996eb2c34033341";
+                width = 640;
+              };
+              {
+                height = 300;
+                url = "https://i.scdn.co/image/2e4646f11b710bae7802d1dd85c634c6aa5f5ff0";
+                width = 300;
+              };
+              {
+                height = 64;
+                url = "https://i.scdn.co/image/a389ad01fe08f0d1d994f55ac28d8a417c047158";
+                width = 64;
+              };
+            ]);
+            name = "Cavalcade Of Glee & Dadaist Happy Hardcore Pom Poms";
+            uri = "spotify:album:5v4vDmq8pNO3TbegZmK5bL";
+          };
+        ];
+        limit = 20;
+        offset = 0;
+        total = 1;
+      })
+    })
+
 let test_parse_artist_search () =
   let results =
     string_of_file "artist_search.json"
@@ -68,5 +114,6 @@ let test_parse_artist_search () =
 let suite =
   "test_parse" >:::
     [
+      "test_parse_album_search" >:: test_parse_album_search;
       "test_parse_artist_search" >:: test_parse_artist_search;
     ]
