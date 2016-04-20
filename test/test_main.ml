@@ -6,4 +6,4 @@ let base_suite =
       Test_href.suite;
     ]
 
-let _ = run_test_tt_main base_suite
+let () = OUnit2.run_test_tt_main (ounit2_of_ounit1 base_suite)

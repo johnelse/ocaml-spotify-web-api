@@ -33,6 +33,6 @@ Executable test_main
   BuildDepends:          oUnit, spotify-web-api
 
 Test test_main
-  Command:               $test_main
+  Command:               $test_main -runner sequential
   Run$:                  flag(tests)
   WorkingDirectory:      test
