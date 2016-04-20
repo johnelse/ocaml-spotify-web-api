@@ -18,6 +18,9 @@ remove: [
   [make "PREFIX=%{prefix}%" "uninstall"]
 ]
 depends: [
+  "oasis" {build}
+  "ocamlbuild" {build}
+  "ocamlfind" {build}
   "atdgen"
   "biniou"
   "yojson"
