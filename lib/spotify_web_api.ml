@@ -28,10 +28,10 @@ module Remote = struct
   module C = Cohttp_lwt_unix
 
   let read_uri uri parse_fn =
-    let open Cohttp_lwt_unix_io in
+    let open Cohttp_lwt_unix.IO in
     C.Client.call ~chunked:false `GET uri
     >>= (fun (_, body) ->
-      Cohttp_lwt_body.to_string body
+      Cohttp_lwt__Body.to_string body
       >>= (fun data -> return (parse_fn data)))
 end
 

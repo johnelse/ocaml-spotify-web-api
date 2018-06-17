@@ -27,6 +27,6 @@ depends: [
   "uri"
   "ssl"
   "lwt"
-  "cohttp" {>= "0.10.0"}
+  "cohttp" {>= "1.0.0"}
   "ounit"
 ]
