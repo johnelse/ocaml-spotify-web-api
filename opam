@@ -4,7 +4,6 @@ homepage: "https://github.com/johnelse/ocaml-spotify-web-api"
 bug-reports: "https://github.com/johnelse/ocaml-spotify-web-api/issues"
 dev-repo: "git://github.com/johnelse/ocaml-spotify-web-api"
 maintainer: "john.else@gmail.com"
-available: [ ocaml-version >= "4.01.0" ]
 build: [
   [make]
 ]
