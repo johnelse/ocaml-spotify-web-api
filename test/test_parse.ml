@@ -10,7 +10,7 @@ let string_of_file filename =
     let buffer = Bytes.create length in
     really_input chan buffer 0 length;
     close_in chan;
-    buffer
+    Bytes.to_string buffer
   with e ->
     close_in chan;
     raise e
