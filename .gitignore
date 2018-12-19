@@ -1,9 +1,6 @@
 lib/*_j.ml*
 lib/*_t.ml*
 *.swp
-
 _build
-setup.data
-setup.log
-
-test_main.byte
+*.merlin
+*.install
