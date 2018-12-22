@@ -1,7 +1,7 @@
 opam-version: "2.0"
 synopsis: "OCaml bindings to the Spotify web API"
 maintainer: "john.else@gmail.com"
-authors: "John Else"
+authors: ["John Else"]
 homepage: "https://github.com/johnelse/ocaml-spotify-web-api"
 bug-reports: "https://github.com/johnelse/ocaml-spotify-web-api/issues"
 depends: [
@@ -12,12 +12,11 @@ depends: [
   "uri"
   "ssl"
   "cohttp-lwt-unix" {>= "1.0.0"}
-  "ounit"
+  "ounit" {with-test}
 ]
 build: [
   [make "build"]
-  [with-doc "dune" "build" "@doc" "-p" name]
-  [with-test make "test"]
+  ["dune" "build" "@doc" "-p" name] {with-doc}
+  ["dune" "runtest" "-p" name] {with-test}
 ]
-install: [make "install"]
 dev-repo: "git://github.com/johnelse/ocaml-spotify-web-api"
