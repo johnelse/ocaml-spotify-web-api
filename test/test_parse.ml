@@ -1,6 +1,6 @@
 open OUnit
 
-let data_dir = "data"
+let data_dir = "../../../test/data"
 
 let string_of_file filename =
   let path = Filename.concat data_dir filename in
