@@ -1,8 +1,15 @@
 language: c
-install: wget https://raw.githubusercontent.com/ocaml/ocaml-travisci-skeleton/master/.travis-opam.sh
-script: PACKAGE=spotify-web-api REVDEPS=true bash -ex .travis-opam.sh
+sudo: required
+service: docker
+install:
+  - wget https://raw.githubusercontent.com/ocaml/ocaml-travisci-skeleton/master/.travis-docker.sh
+script:
+  - bash -ex .travis-docker.sh
 env:
-  - OCAML_VERSION=4.03
-  - OCAML_VERSION=4.04
-  - OCAML_VERSION=4.05
-  - OCAML_VERSION=4.06
+  global:
+    - PACKAGE=spotify-web-api
+  matrix:
+    - DISTRO="debian-9-ocaml-4.03"
+    - DISTRO="debian-9-ocaml-4.04"
+    - DISTRO="debian-9-ocaml-4.05"
+    - DISTRO="debian-9-ocaml-4.06"
