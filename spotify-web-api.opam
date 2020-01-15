@@ -15,7 +15,7 @@ depends: [
   "ounit" {with-test}
 ]
 build: [
-  [make "build"]
+  [make "build-install" "PACKAGE=%{name}%"]
   ["dune" "build" "@doc" "-p" name] {with-doc}
   ["dune" "runtest" "-p" name] {with-test}
 ]
