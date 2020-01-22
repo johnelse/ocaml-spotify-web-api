@@ -13,6 +13,9 @@ lib/%_t.ml: lib/%.atd
 build: $(ATDGEN_J_FILES) $(ATDGEN_T_FILES)
 	dune build @install
 
+build-install: $(ATDGEN_J_FILES) $(ATDGEN_T_FILES)
+	dune build -p $(PACKAGE) @install
+
 test: build
 	rm -rf _build/default/test/data
 	mkdir -p _build/default/test/data
